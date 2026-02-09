@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Eurosolve\\source\\repos\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\obj\\Debug\\net10.0\\scopedcss\\projectbundle\\BeauposHistory.Shared.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BeauposHistory.Shared.e6hlcilulw.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Eurosolve\\source\\repos\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Eurosolve\\source\\repos\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Eurosolve\\source\\repos\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eurosolve\\source\\repos\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.BeauposHistory.Shared.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.BeauposHistory.Shared.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.build.BeauposHistory.Shared.props",
+      "PackagePath": "build\\BeauposHistory.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.buildMultiTargeting.BeauposHistory.Shared.props",
+      "PackagePath": "buildMultiTargeting\\BeauposHistory.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.buildTransitive.BeauposHistory.Shared.props",
+      "PackagePath": "buildTransitive\\BeauposHistory.Shared.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

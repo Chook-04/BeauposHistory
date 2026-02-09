@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "BeauposHistory.Web/1.0.0": {
+        "dependencies": {
+          "BeauposHistory.Shared": "1.0.0"
+        },
+        "runtime": {
+          "BeauposHistory.Web.dll": {}
+        }
+      },
+      "BeauposHistory.Shared/1.0.0": {
+        "runtime": {
+          "BeauposHistory.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BeauposHistory.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BeauposHistory.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
