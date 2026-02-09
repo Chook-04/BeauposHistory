@@ -1,1 +1,2 @@
 C:\Users\Eurosolve\source\repos\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\Chook Jing Foong\Documents\GitHub\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json

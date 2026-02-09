@@ -17,7 +17,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>416</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 06:24:38 GMT</LastWriteTime>
+      <LastWriteTime>Mon, 09 Feb 2026 15:09:49 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.styles.css'))">
@@ -32,12 +32,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>cx2uirg66e</Fingerprint>
-      <Integrity>sHdpfnmlSA3ZgZjGmQ/C+3AoYB0ke6Sq8+lIemILizA=</Integrity>
+      <Fingerprint>ef16yjsqsn</Fingerprint>
+      <Integrity>RuUJLZ+Ft7S/DFtEJk99a31jI4KA3FM6/5NVg0KhqO4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>93</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 07:40:45 GMT</LastWriteTime>
+      <LastWriteTime>Mon, 09 Feb 2026 16:42:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.styles.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))">
@@ -57,7 +57,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>803</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 06:24:38 GMT</LastWriteTime>
+      <LastWriteTime>Mon, 09 Feb 2026 15:09:49 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.modules.json'))">

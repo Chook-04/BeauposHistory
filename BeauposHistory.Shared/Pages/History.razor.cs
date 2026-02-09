@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BeauposHistory.Shared.Enums;
 
 namespace BeauposHistory.Shared.Pages
 {
@@ -55,14 +56,45 @@ namespace BeauposHistory.Shared.Pages
 
 
 
+        private HistoryView CurrentView = HistoryView.None;
 
+        void SelectView(HistoryView view)
+        {
+            CurrentView = view;
+        }
 
         private string activeRowId = ""; // 记录当前点击的行
 
         private void SelectRow(string rowId)
         {
             activeRowId = rowId;
+
+            CurrentView = rowId switch
+            {
+                // -------- Work --------
+                "work-order" => HistoryView.WorkOrder,
+                "work-item" => HistoryView.WorkItem,
+                "work-customer" => HistoryView.WorkCustomer,
+                "work-staff" => HistoryView.WorkStaff,
+
+                // -------- Outstanding --------
+                "out-total" => HistoryView.OutstandingTotal,
+                "out-coll" => HistoryView.OutstandingCollection,
+
+                // -------- Signup --------
+                "signup-credit" => HistoryView.SignupCredit,
+                "signup-voucher" => HistoryView.SignupVoucher,
+                "signup-point" => HistoryView.SignupPoint,
+
+                // -------- Redeem --------
+                "redeem-credit" => HistoryView.RedeemCredit,
+                "redeem-voucher" => HistoryView.RedeemVoucher,
+                "redeem-point" => HistoryView.RedeemPoint,
+
+                _ => HistoryView.None
+            };
         }
+
 
 
         // 在 yourpage.razor.cs 中添加
@@ -81,9 +113,9 @@ namespace BeauposHistory.Shared.Pages
         /// </summary>
         public class PaymentMethod
         {
-            public string Id { get; set; }
-            public string Name { get; set; }
-            public string LabelAmount { get; set; } // 对应你前端显示的金额变量名
+            public string? Id { get; set; }
+            public string? Name { get; set; }
+            public string? LabelAmount { get; set; } // 对应你前端显示的金额变量名
             public bool IsVisible { get; set; } = true; // 预留 Logic：是否显示
         }
 
@@ -100,7 +132,7 @@ namespace BeauposHistory.Shared.Pages
 
 
 
-
+ 
 
 
 

@@ -1,20 +1,16 @@
 ﻿@page "/history"
+@using BeauposHistory.Shared.Enums
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
 <div class="history-layout">
-
-
     <div class="sidebar-toggle-btn" @onclick="ToggleSidebar">
         <i class="fas @(isSidebarExpanded ? "fa-times" : "fa-bars")"></i>
     </div>
-    <aside class="history-sidebar @(isSidebarExpanded ? "expanded" : "collapsed")">
+    <aside class="history-sidebar @(isSidebarExpanded ? "expanded" : "collapsed")" @onclick="ToggleSidebar">
 
-        @* <div class="mobile-toggle" @onclick="ToggleSidebar">
-            <span>@(isSidebarExpanded ? "Close" : "Menu")</span>
-            <span class="toggle-icon">@(isSidebarExpanded ? "▲" : "▼")</span>
-        </div> *@
-
-
-            
         <!-- Date Filter -->
         <div class="date-filter">
             <span class="nav-btn">◀</span>
@@ -53,7 +49,10 @@
 
         <!-- Work -->
         <section class="sidebar-section">
-            <span class="section-title">Work</span>
+
+            <div class="section-row">
+                <span class="section-title">Work</span>
+            </div>
 
             <div class="icon-row @(activeRowId == "work-order" ? "active" : "")" @onclick='() => SelectRow("work-order")'>
                 <span><i class="fas fa-file-invoice"></i> </span>
@@ -86,8 +85,11 @@
 
         <!-- Outstanding -->
         <section class="sidebar-section">
-            <span class="section-title">Outstanding</span>
-            <span>@Label_TotalOutstandingAmount</span>
+
+            <div class="section-row">
+                <span class="section-title">Outstanding</span>
+                <span class="section-value">@Label_TotalOutstandingAmount</span>
+            </div>
 
             <div class="icon-row danger @(activeRowId == "out-total" ? "active" : "")" @onclick='() => SelectRow("out-total")'>
                 <span><i class="fas fa-hand-holding-usd"></i></span>
@@ -104,7 +106,10 @@
 
         <!-- Sign Up -->
         <section class="sidebar-section">
-            <span class="section-title">Sign Up</span>
+
+            <div class="section-row">
+                <span class="section-title">Sign Up</span>
+            </div>
 
             <div class="icon-row warning @(activeRowId == "signup-credit" ? "active" : "")" @onclick='() => SelectRow("signup-credit")'>
                 <span><i class="fas fa-coins"></i> </span>
@@ -125,7 +130,10 @@
 
         <!-- Redeem -->
         <section class="sidebar-section">
-            <span class="section-title">Redeem</span>
+
+            <div class="section-row">
+                <span class="section-title">Redeem</span>
+            </div>
 
             <div class="icon-row warning @(activeRowId == "redeem-credit" ? "active" : "")" @onclick='() => SelectRow("redeem-credit")'>
                 <span><i class="fas fa-coins"></i> </span>
@@ -147,7 +155,7 @@
     </aside>
 
 
-    <main class="history-main">
+    @* <main class="history-main">
         <div class="list-header">
             <h2>@Label_DetailHeader</h2>
             <span>@Label_RecordFoundCount</span>
@@ -171,5 +179,54 @@
                 </div>
             }
         </div>
+    </main> *@
+
+
+
+
+    <main class="history-main">
+        @switch (CurrentView)
+        {
+            // -------- Collection --------
+            case HistoryView.CollectionCash:
+            case HistoryView.CollectionDebitCard:
+            case HistoryView.CollectionCreditCard:
+            case HistoryView.CollectionTNG:
+            case HistoryView.CollectionOnline:
+            case HistoryView.CollectionQRPay:
+                <CollectionHistory View="CurrentView" />
+                break;
+
+            // -------- Work --------
+            case HistoryView.WorkOrder:
+            case HistoryView.WorkItem:
+            case HistoryView.WorkCustomer:
+            case HistoryView.WorkStaff:
+                <WorkHistory View="CurrentView" />
+                break;
+
+            // -------- Outstanding --------
+            case HistoryView.OutstandingTotal:
+            case HistoryView.OutstandingCollection:
+                <OutstandingHistory View="CurrentView" />
+                break;
+
+            // -------- Signup / Redeem --------
+            case HistoryView.SignupCredit:
+            case HistoryView.SignupVoucher:
+            case HistoryView.SignupPoint:
+            case HistoryView.RedeemCredit:
+            case HistoryView.RedeemVoucher:
+            case HistoryView.RedeemPoint:
+                <SignupRedeemHistory View="CurrentView" />
+                break;
+
+            default:
+                <div class="empty-state">
+                    Please select a category
+                </div>
+                break;
+        }
     </main>
+
 </div>
