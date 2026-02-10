@@ -9,5 +9,7 @@ namespace BeauposHistory.Shared.Components.History
     public partial class OutstandingHistory : ComponentBase
     {
         [Parameter] public HistoryView View { get; set; }
+
+
     }
 }

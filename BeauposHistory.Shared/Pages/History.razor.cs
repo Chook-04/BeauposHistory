@@ -63,7 +63,7 @@ namespace BeauposHistory.Shared.Pages
             CurrentView = view;
         }
 
-        private string activeRowId = ""; // 记录当前点击的行
+        private string activeRowId = ""; 
 
         private void SelectRow(string rowId)
         {

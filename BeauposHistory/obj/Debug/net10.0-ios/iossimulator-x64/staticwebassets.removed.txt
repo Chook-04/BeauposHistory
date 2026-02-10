@@ -1,2 +1,2 @@
-C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\staticwebassets\blazor.webview.js
-C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\staticwebassets\blazor.modules.json
+C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\staticwebassets\blazor.webview.js
+C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\staticwebassets\blazor.modules.json

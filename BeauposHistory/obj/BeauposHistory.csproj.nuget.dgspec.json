@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj": {}
+    "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
+    "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj",
         "projectName": "BeauposHistory.Shared",
-        "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj",
-        "packagesPath": "C:\\Users\\Chook Jing Foong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\obj\\",
+        "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj",
+        "packagesPath": "C:\\Users\\Eurosolve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chook Jing Foong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eurosolve\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -350,21 +350,21 @@
         }
       }
     },
-    "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj": {
+    "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj",
+        "projectUniqueName": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj",
         "projectName": "BeauposHistory",
-        "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj",
-        "packagesPath": "C:\\Users\\Chook Jing Foong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\obj\\",
+        "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.csproj",
+        "packagesPath": "C:\\Users\\Eurosolve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chook Jing Foong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eurosolve\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -383,32 +383,32 @@
           "net10.0-android36.0": {
             "targetAlias": "net10.0-android",
             "projectReferences": {
-              "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
-                "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
+              "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
               }
             }
           },
           "net10.0-ios26.1": {
             "targetAlias": "net10.0-ios",
             "projectReferences": {
-              "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
-                "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
+              "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
               }
             }
           },
           "net10.0-maccatalyst26.1": {
             "targetAlias": "net10.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
-                "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
+              "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
               }
             }
           },
           "net10.0-windows10.0.19041": {
             "targetAlias": "net10.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
-                "projectPath": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
+              "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory.Shared\\BeauposHistory.Shared.csproj"
               }
             }
           }
