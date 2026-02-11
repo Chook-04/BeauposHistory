@@ -1,3 +1,0 @@
-C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Shared\wwwroot\app.css
-C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Shared\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Shared\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map

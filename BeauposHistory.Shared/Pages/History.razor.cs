@@ -10,12 +10,6 @@ namespace BeauposHistory.Shared.Pages
 
         protected string Label_FilterDateRange => "01/02/2026 - 09/02/2026";
 
-        protected string Label_DetailHeader => "Collection History - TNG";
-        protected string Label_RecordFoundCount => "Found 89 records in this period";
-
-        protected string Label_RecordID => "#HIST-2026-00015";
-        protected string Label_RecordAmount => "RM 209.00";
-        protected string Label_RecordTimestamp => "05:41 PM, 06 Feb 2026";
 
         protected override void OnInitialized()
         {
@@ -26,20 +20,13 @@ namespace BeauposHistory.Shared.Pages
 
         protected string Label_CollectionAmount => "209.00";
 
-
-        protected string Label_TNGAmount => "209.00";
-
-
         protected string Label_OrderCount => "1";
         protected string Label_ItemCount => "1";
         protected string Label_CustomerCount => "1";
         protected string Label_StaffCount => "1";
 
 
-        protected string Label_Outstanding => "Outstanding";
-        protected string Label_TotalOutstanding => "Total Outstanding";
         protected string Label_TotalOutstandingAmount => "0.00";
-        protected string Label_OutstandingCollection => "Outstanding Collection";
         protected string Label_OutstandingCollectionAmount => "0.00";
 
 
@@ -52,7 +39,15 @@ namespace BeauposHistory.Shared.Pages
 
 
 
+        private bool isPrintMenuVisible = false;
 
+        private void TogglePrintMenu()
+        {
+            isPrintMenuVisible = !isPrintMenuVisible;
+        }
+
+        private void ExportPDF() {  isPrintMenuVisible = false; }
+        private void DirectPrint() {  isPrintMenuVisible = false; }
 
 
 
@@ -102,6 +97,11 @@ namespace BeauposHistory.Shared.Pages
 
                 _ => HistoryView.None
             };
+
+            if (isSidebarExpanded)
+            {
+                isSidebarExpanded = false;
+            }
         }
 
 
@@ -139,15 +139,26 @@ namespace BeauposHistory.Shared.Pages
         };
 
 
+        private bool IsBackdateSaleEditing = false;
+        private IEnumerable<DateTime?> GetCalendarDays()
+        {
+            var firstDayOfMonth = new DateTime(DisplayMonth.Year, DisplayMonth.Month, 1);
+            var daysInMonth = DateTime.DaysInMonth(DisplayMonth.Year, DisplayMonth.Month);
 
+            int offset = ((int)firstDayOfMonth.DayOfWeek + 6) % 7;
 
-        bool ShowReceiptModal;
+            for (int i = 0; i < offset; i++) yield return null;
+            for (int i = 1; i <= daysInMonth; i++) yield return new DateTime(DisplayMonth.Year, DisplayMonth.Month, i);
+        }
 
-        void OpenReceipt() => ShowReceiptModal = true;
-        void CloseReceipt() => ShowReceiptModal = false;
-
-
-
+        private DateTime DisplayMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+        private DateTime? SelectedDate = DateTime.Today;
+        private void EnterEditBackdateSale() => IsBackdateSaleEditing = true;
+        private void SelectDate(DateTime date)
+        {
+            SelectedDate = date;
+            IsBackdateSaleEditing = false;
+        }
 
     }
 }

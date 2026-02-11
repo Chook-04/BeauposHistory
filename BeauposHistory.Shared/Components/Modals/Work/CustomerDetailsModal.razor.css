@@ -58,7 +58,7 @@
         align-items: stretch;
     }
 
-.item-icon {
+.cust-icon {
     width: 48px;
     height: 48px;
     background-color: var(--cream);
@@ -70,13 +70,13 @@
     font-size: 20px;
 }
 
-.item-name {
+.cust-name {
     font-weight: 600;
     color: var(--brown);
     font-size: 16px;
 }
 
-.order-tag {
+.cust-num {
     color: var(--silver);
     font-size: 14px;
 }

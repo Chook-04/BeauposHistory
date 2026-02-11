@@ -1,5 +1,7 @@
-﻿
-<div class="modal-content-container">
+﻿@using BeauposHistory.Shared.Components.Common
+
+<BaseModal Visible="Visible" OnClose="OnClose" Size="BaseModal.ModalSize.Medium">
+
     <div class="modal-header">
         <button type="button" class="custom-close-btn" @onclick="OnClose">
             <i class="oi oi-x"></i>
@@ -465,7 +467,8 @@
             }
         </div>
     </div>
-</div>
+</BaseModal>
+
 
 @code {
 

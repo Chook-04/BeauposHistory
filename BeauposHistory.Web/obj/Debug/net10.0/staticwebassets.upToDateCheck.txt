@@ -1,6 +1,6 @@
 Components\Layout\ReconnectModal.razor.js
-C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.web.js
-C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.server.js
-C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Web\Components\Layout\ReconnectModal.razor.js
-C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\_framework\blazor.web.js
-C:\Users\Chook Jing Foong\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\_framework\blazor.server.js
+C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.web.js
+C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.server.js
+C:\Users\Eurosolve\Downloads\BeauposHistory (1)\BeauposHistory\BeauposHistory\BeauposHistory.Web\Components\Layout\ReconnectModal.razor.js
+C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\_framework\blazor.web.js
+C:\Users\Eurosolve\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\_framework\blazor.server.js

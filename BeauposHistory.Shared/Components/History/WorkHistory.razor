@@ -1,6 +1,7 @@
 ﻿@using BeauposHistory.Shared.Enums
 @using BeauposHistory.Shared.Components.Common
 @using BeauposHistory.Shared.Components.Modals.Work
+@using BeauposHistory.Shared.Components.Modals
 
 <div class="work-container">
     <h3 class="view-title">Work: @GetViewTitle()</h3>
@@ -18,27 +19,37 @@
         </div>
 
         <div class="summary-section">
-            <div class="total-text">Total - @FilteredItems.Count()</div>
+            <div class="total-text">Total - @FilteredReceipts.Count()</div>
             @if (activeTab != "All")
             {
                 <div class="group-label">@activeTab.ToUpper()</div>
             }
         </div>
 
-        @foreach (var item in FilteredItems)
-        {
-            <div class="item-card" @onclick="OpenItemDetail">
-                <div class="item-icon-box"><i class="fas fa-image"></i></div>
-                <div class="item-info">
-                    <div class="primary-text">@item.Name</div>
-                    <div class="secondary-text">@item.Price.ToString("N2")</div>
-                </div>
-                <div class="item-meta">
-                    <div class="qty-text">@item.Qty</div>
-                    <div class="price-text">@item.Price.ToString("N2")</div>
-                </div>
-            </div>
-        }
+        <div class="item-cardlist">
+            @foreach (var receipt in FilteredReceipts)
+            {
+                @foreach (var item in receipt.Items)
+                {
+                    @if (activeTab == "All" || item.Category == activeTab)
+                    {
+                        <div class="item-card" @onclick="() => OpenItemDetail(item)">
+                            <div class="item-icon-box">
+                                <i class="fas @(item.Category == "Package" ? "fa-box" : "fa-concierge-bell")"></i>
+                            </div>
+                            <div class="item-info">
+                                <div class="primary-text">@item.ItemName</div>
+                                <div class="secondary-text">@item.Category</div>
+                            </div>
+                            <div class="item-meta">
+                                <div class="qty-text">x @item.Quantity</div>
+                                <div class="price-text">RM @item.Price.ToString("N2")</div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
     }
     else if (View == HistoryView.WorkCustomer)
     {
@@ -52,8 +63,8 @@
                     <i class="fas fa-user-circle fa-2x" style="color: #ccc;"></i>
                 </div>
                 <div class="customer-info">
-                    <div class="primary-text">WK</div>
-                    <div class="secondary-text">•••••••3528</div>
+                    <div class="primary-text">@ChookMember.Name</div>
+                    <div class="secondary-text">@ChookMember.PhoneNumber</div>
                 </div>
                 <div class="customer-stats">
                     <div class="price-text">209.00</div>
@@ -127,18 +138,15 @@
 
 <ItemDetailsModal @key="isItemDetailModalVisible"
                   Visible="isItemDetailModalVisible"
+                  ItemModel="SelectedItem"
                   OnClose="CloseItemDetail" />
 
 <CustomerDetailsModal Visible="isCustomerDetailModalVisible"
+                      MemberModel="SelectedMember"
                       OnClose="CloseCustomerModal" />
 
-<BaseModal Visible="@ShowReceiptModal"
-           OnClose="@CloseReceipt"
-           Size="BaseModal.ModalSize.Large">
-
-    <HistoryDetails />
-
-</BaseModal>
+<HistoryDetailsModal Visible="@ShowReceiptModal"
+                     OnClose="@CloseReceipt" />
 
 @code {
 

@@ -8,17 +8,102 @@
 
 
 <div class="history-layout">
-    <div class="sidebar-toggle-btn" @onclick="ToggleSidebar">
-        <i class="fas @(isSidebarExpanded ? "fa-times" : "fa-bars")"></i>
+
+    <div class="top-navbar mobile-only" @onclick="ToggleSidebar">
+        <div class="sidebar-toggle-btn">
+            <i class="fas @(isSidebarExpanded ? "fa-times" : "fa-bars")"></i>
+        </div>
+        <div class="navbar-title">History</div>
     </div>
+
     <aside class="history-sidebar @(isSidebarExpanded ? "expanded" : "collapsed")">
+
+        <div class="sidebar-toggle-btn desktop-only" @onclick="ToggleSidebar">
+            <i class="fas @(isSidebarExpanded ? "fa-times" : "fa-bars")"></i>
+        </div>
 
         <!-- Date Filter -->
         <div class="date-filter">
             <span class="nav-btn">◀</span>
-            <span class="date-text">@Label_FilterDateRange</span>
+            <span class="date-text" @onclick="() => IsBackdateSaleEditing = true">@Label_FilterDateRange</span>
             <span class="nav-btn">▶</span>
-            <span class="print-btn">🖨</span>
+
+            @if (IsBackdateSaleEditing)
+            {
+                <div class="calendar-overlay" @onclick="() => IsBackdateSaleEditing = false">
+                    <div class="backdate-full-view" @onclick:stopPropagation>
+                        <div class="calendar-nav-header">
+                            <button class="back-link" @onclick="() => IsBackdateSaleEditing = false">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span class="nav-title">Select Date</span>
+                        </div>
+
+                        <div class="month-control-bar">
+                            <span class="month-label">@DisplayMonth.ToString("MMMM yyyy")</span>
+                            <div class="arrows">
+                                <i class="fas fa-chevron-left arrow-icon" @onclick='() => DisplayMonth = DisplayMonth.AddMonths(-1)'></i>
+
+                                @if (DisplayMonth.Year < DateTime.Today.Year || DisplayMonth.Month < DateTime.Today.Month)
+                                {
+                                    <i class="fas fa-chevron-right arrow-icon" @onclick='() => DisplayMonth = DisplayMonth.AddMonths(1)'></i>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="calendar-container">
+                            <div class="weekdays-row">
+                                <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                            </div>
+                            <div class="days-grid">
+                                @foreach (var day in GetCalendarDays())
+                                {
+                                    if (day == null)
+                                    {
+                                        <div class="day-item empty"></div>
+                                    }
+                                    else
+                                    {
+                                        bool isFuture = day.Value.Date > DateTime.Today;
+                                        bool isSelected = day.Value.Date == SelectedDate?.Date;
+
+                                        <div class="day-item @(isSelected ? "selected" : "") @(isFuture ? "disabled" : "")"
+                                             @onclick="() => { if (!isFuture) SelectDate(day.Value); }">
+                                            @day.Value.Day
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <div class="print-container">
+                <div class="print" @onclick="TogglePrintMenu">
+                    <span class="print-btn">
+                        <i class="fas fa-print"></i>
+                    </span>
+                </div>
+
+                @if (isPrintMenuVisible)
+                {
+                    <div class="print-menu-overlay" @onclick="TogglePrintMenu"></div>
+
+                    <div class="print-dropdown-menu">
+                        <button class="menu-item" @onclick="ExportPDF">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF</span>
+                        </button>
+                        <div class="menu-divider"></div>
+                        <button class="menu-item" @onclick="DirectPrint">
+                            <i class="fas fa-print"></i>
+                            <span>Print</span>
+                        </button>
+                    </div>
+                }
+            </div>
         </div>
 
         <!-- Collection -->
@@ -156,23 +241,7 @@
 
     </aside>
 
-
-
-
-
     <main class="history-main">
-        @* <button class="btn btn-primary" @onclick="OpenReceipt">
-            View Receipt
-        </button>
-
-        <BaseModal Visible="@ShowReceiptModal"
-                   OnClose="@CloseReceipt"
-                   Size="BaseModal.ModalSize.Large">
-
-            <HistoryDetails />
-
-        </BaseModal> *@
-
 
         @switch (CurrentView)
         {

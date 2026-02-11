@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BeauposHistory.Shared.Models;
 
 namespace BeauposHistory.Shared.Components.Modals.Work
 {
@@ -9,6 +10,9 @@ namespace BeauposHistory.Shared.Components.Modals.Work
     {
         [Parameter] public bool Visible { get; set; }
         [Parameter] public EventCallback OnClose { get; set; }
+
+        [Parameter] public ServiceItemDM ItemModel { get; set; } = new();
+
 
         //private bool _closing;
         //private bool _disposed;

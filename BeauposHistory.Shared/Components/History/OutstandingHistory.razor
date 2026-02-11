@@ -1,4 +1,5 @@
 ﻿@using BeauposHistory.Shared.Enums
+@using BeauposHistory.Shared.Components.Modals
 
 <div class="outstanding-container">
     <h3 class="view-title">Outstanding</h3>
@@ -42,13 +43,8 @@
     }
 </div>
 
-<BaseModal Visible="@ShowReceiptModal"
-           OnClose="@CloseReceipt"
-           Size="BaseModal.ModalSize.Large">
-
-    <HistoryDetails />
-
-</BaseModal>
+<HistoryDetailsModal Visible="@ShowReceiptModal"
+                     OnClose="@CloseReceipt" />
 
 @code {
 

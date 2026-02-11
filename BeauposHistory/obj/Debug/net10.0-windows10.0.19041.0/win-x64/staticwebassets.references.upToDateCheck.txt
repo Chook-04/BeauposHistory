@@ -16,3 +16,5 @@ C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory
 C:\Users\Chook Jing Foong\Downloads\BeauposHistory\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\Eurosolve\Downloads\BeauposHistory (1)\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\Eurosolve\Downloads\BeauposHistory (1)\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\Eurosolve\Downloads\BeauposHistory (1)\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\Eurosolve\Downloads\BeauposHistory (1)\BeauposHistory\BeauposHistory\BeauposHistory.Shared\obj\Debug\net10.0\staticwebassets.build.json

@@ -1,4 +1,5 @@
 ﻿using BeauposHistory.Shared.Enums;
+using BeauposHistory.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -13,34 +14,133 @@ namespace BeauposHistory.Shared.Components.History
 
         private string activeTab = "All";
         private string[] itemTabs = new[] { "All", "Service", "Product", "Package" };
-        public class WorkItem
-        {
-            public string Name { get; set; }
-            public double Price { get; set; }
-            public int Qty { get; set; }
-            public string Category { get; set; }
-        }
 
-        private List<WorkItem> AllItems = new List<WorkItem>();
 
-        private IEnumerable<WorkItem> FilteredItems
+
+
+        private IEnumerable<ReceiptDM> FilteredReceipts
         {
             get
             {
-                if (AllItems == null) return Enumerable.Empty<WorkItem>();
+                if (RawReceipts == null) return Enumerable.Empty<ReceiptDM>();
 
-                return activeTab == "All"
-                    ? AllItems
-                    : AllItems.Where(i => i.Category == activeTab);
+                if (activeTab == "All") return RawReceipts;
+
+                return RawReceipts.Where(r => r.Items != null &&
+                                             r.Items.Any(i => i.Category == activeTab));
             }
         }
 
+        private List<ReceiptDM> RawReceipts = new();
+
+
+        private MemberDetailsDM ChookMember = new MemberDetailsDM
+        {
+            MemberId = "123",
+            Name = "Chook",
+            PhoneNumber = "012-3456789",
+            Sex = "Male",
+            DateRegistered = DateTime.Now
+        };
+
         protected override void OnInitialized()
         {
-            AllItems = new List<WorkItem>
+
+
+            RawReceipts = new List<ReceiptDM>
             {
-                new WorkItem { Name = "Antiaging facial", Price = 209.00, Qty = 1, Category = "Service" },
-                new WorkItem { Name = "Product A", Price = 50.00, Qty = 2, Category = "Product" }
+                new ReceiptDM
+                {
+                    ReceiptNo = "13",
+                    TransactionDate = new DateTime(2026, 02, 1),
+                    Status = ReceiptDM.EInvoiceStatus.Cancelled,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM {Category="Service", ItemName = "Treatment", Price = 13.13m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="QR Pay", Amount=13.13m }
+                    }
+                },
+                new ReceiptDM
+                {
+                    ReceiptNo = "14",
+                    TransactionDate = new DateTime(2026, 02, 1),
+                    Status = ReceiptDM.EInvoiceStatus.NoStatus,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM {Category="Package", ItemName = "Package 10 free 100", Price = 14.14m, Quantity = 1 },
+                        new ServiceItemDM {Category="Service", ItemName = "Treatment", Price = 14.14m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="Cash", Amount=14.14m }
+                    }
+                },
+                new ReceiptDM
+                {
+                    ReceiptNo = "15",
+                    TransactionDate = new DateTime(2026, 01, 1),
+                    Status = ReceiptDM.EInvoiceStatus.Cancelled,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM { Category="Product",ItemName = "Treatment", Price = 15.15m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="TNG", Amount=15.15m }
+                    }
+                },
+                new ReceiptDM
+                {
+                    ReceiptNo = "15",
+                    TransactionDate = new DateTime(2026, 01, 1),
+                    Status = ReceiptDM.EInvoiceStatus.Cancelled,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM { Category="Product",ItemName = "Treatment", Price = 15.15m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="TNG", Amount=15.15m }
+                    }
+                },
+                new ReceiptDM
+                {
+                    ReceiptNo = "15",
+                    TransactionDate = new DateTime(2026, 01, 1),
+                    Status = ReceiptDM.EInvoiceStatus.Cancelled,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM { Category="Product",ItemName = "Treatment", Price = 15.15m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="TNG", Amount=15.15m }
+                    }
+                },
+                new ReceiptDM
+                {
+                    ReceiptNo = "15",
+                    TransactionDate = new DateTime(2026, 01, 1),
+                    Status = ReceiptDM.EInvoiceStatus.Cancelled,
+                    Member = ChookMember,
+                    Items = new List<ServiceItemDM>
+                    {
+                        new ServiceItemDM { Category="Product",ItemName = "Treatment", Price = 15.15m, Quantity = 1 }
+                    },
+                    Payments = new List<PaymentMethodDM>
+                    {
+                        new PaymentMethodDM { MethodName="TNG", Amount=15.15m }
+                    }
+
+                },
             };
         }
 
@@ -71,9 +171,11 @@ namespace BeauposHistory.Shared.Components.History
 
 
 
+
         private bool isStaffModalVisible = false;
 
         private string selectedStaffName = "Effie";
+
         private async Task OpenStaffDetail(string name)
         {
             selectedStaffName = name;
@@ -85,6 +187,8 @@ namespace BeauposHistory.Shared.Components.History
             isStaffModalVisible = false;
         }
 
+
+
         private bool isItemDetailModalVisible = false;
 
         private void CloseItemDetail()
@@ -92,17 +196,35 @@ namespace BeauposHistory.Shared.Components.History
             isItemDetailModalVisible = false;
         }
 
-        private void OpenItemDetail()
+
+        public ServiceItemDM SelectedItem { get; set; } = new();
+        private void OpenItemDetail(ServiceItemDM item)
         {
             if (isItemDetailModalVisible) return;
 
+            SelectedItem = item;
             isItemDetailModalVisible = true;
         }
 
 
 
 
+
+
+
         private bool isCustomerDetailModalVisible = false;
+
+        public MemberDetailsDM SelectedMember = new MemberDetailsDM
+        {
+            MemberId = "MEM-888-999",
+            Name = "Chook",
+            PhoneNumber = "012-345 6789",
+            Sex = "Male",
+            DateRegistered = new DateTime(2025, 12, 25),
+            PhotoUrl = "https://i.pravatar.cc/150?u=jason",
+            Credit = 888.50m,
+            Point = 5200
+        };
 
         private void CloseCustomerModal()
         {
@@ -121,5 +243,9 @@ namespace BeauposHistory.Shared.Components.History
 
         void OpenReceipt() => ShowReceiptModal = true;
         void CloseReceipt() => ShowReceiptModal = false;
+
+
+
+
     }
 }

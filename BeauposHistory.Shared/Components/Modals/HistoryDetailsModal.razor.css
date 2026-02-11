@@ -244,14 +244,12 @@
 }
 
 .arrow-icon {
-    color: #0052CC;
     font-size: 1.2rem;
     margin-left: 20px;
     cursor: pointer;
 }
 
     .arrow-icon:hover {
-        color: #003D99;
         transform: translateX(1px);
         filter: drop-shadow(0 2px 4px rgba(0, 82, 204, 0.2));
     }

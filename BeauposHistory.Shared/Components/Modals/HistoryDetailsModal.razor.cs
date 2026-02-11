@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BeauposHistory.Shared.Components.History
+namespace BeauposHistory.Shared.Components.Modals
 {
-    public partial class HistoryDetails
+    public partial class HistoryDetailsModal
     {
         // 页面状态控制
         private bool IsNumpadVisible = false;
@@ -67,6 +67,7 @@ namespace BeauposHistory.Shared.Components.History
             };
         }
 
+        [Parameter] public bool Visible { get; set; }
         [Parameter] public EventCallback OnClose { get; set; }
 
         private void EnterEditPayment() => IsEditingPayment = true;
@@ -76,6 +77,8 @@ namespace BeauposHistory.Shared.Components.History
         private void OnConfirmVoid() { Receipt.IsVoided = true; Receipt.VoidedDate = DateTime.Now; showConfirmButtons = false; }
         private void SaveNumpadValue() { IsNumpadVisible = false; }
         private decimal PaymentDifference => Receipt.TotalSales - Receipt.Payments.Sum(x => x.Amount);
+       
+        
         private IEnumerable<DateTime?> GetCalendarDays()
         {
             var firstDayOfMonth = new DateTime(DisplayMonth.Year, DisplayMonth.Month, 1);
@@ -95,6 +98,8 @@ namespace BeauposHistory.Shared.Components.History
             SelectedDate = date;
             IsBackdateSaleEditing = false;
         }
+
+
 
         public class ReceiptDM
         {
@@ -122,5 +127,7 @@ namespace BeauposHistory.Shared.Components.History
         public class StaffDM { public string Name { get; set; } public string PhoneNumber { get; set; } public string PhotoUrl { get; set; } }
         public class ServedStaffDM { public string Name { get; set; } public decimal EffortPercentage { get; set; } public decimal HofPercentage { get; set; } public decimal Value { get; set; } public string PhotoUrl { get; set; } public string PhoneNumber { get; set; } }
         public class MemberDM { public string MemberId { get; set; } }
+
+
     }
 }

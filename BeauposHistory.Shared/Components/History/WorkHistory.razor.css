@@ -1,10 +1,38 @@
 ﻿.work-container {
+    height: 90vh;
     padding: 16px;
     background-color: #fcfcfc;
     font-family: sans-serif;
     border-radius: 5px;
     box-sizing: border-box;
 }
+.item-cardlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    padding: 4px; 
+    flex: 1; 
+    overflow-y: auto; 
+    height: calc(100vh - 300px);
+}
+
+    .item-cardlist::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .item-cardlist::-webkit-scrollbar-track {
+        background: rgba(245, 242, 235, 0.5);
+    }
+
+    .item-cardlist::-webkit-scrollbar-thumb {
+        background-color: #c19a87;
+        border-radius: 20px;
+        border: 1px solid transparent;
+    }
+
+        .item-cardlist::-webkit-scrollbar-thumb:hover {
+            background-color: #a67f6d;
+        }
 
 .view-title {
     text-align: center;
@@ -25,14 +53,17 @@
     transition: transform 0.2s ease;
     cursor: pointer;
 }
-
 /* --- Segmented Control (Items) --- */
 .segmented-control {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     background-color: var(--cream);
     border-radius: 10px;
     padding: 3px;
     margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .segment {
@@ -55,6 +86,8 @@
 
 /* --- Shared Layouts --- */
 .summary-section {
+    max-height:400px;
+    overflow-y:auto;
     margin-bottom: 12px;
 }
 
