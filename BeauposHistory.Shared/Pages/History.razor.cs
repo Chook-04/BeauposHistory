@@ -19,7 +19,8 @@ namespace BeauposHistory.Shared.Pages
 
         protected override void OnInitialized()
         {
-            // 初始化逻辑
+            CurrentView = HistoryView.CollectionTNG;
+            activeRowId = "col-tng";
         }
         //protected string Label_FilterDateRange => "06/02/2026";
 
@@ -71,6 +72,14 @@ namespace BeauposHistory.Shared.Pages
 
             CurrentView = rowId switch
             {
+                // -------- Collection --------
+                "col-cash" => HistoryView.CollectionCash,
+                "col-dc" => HistoryView.CollectionDebitCard,
+                "col-cc" => HistoryView.CollectionCreditCard,
+                "col-tng" => HistoryView.CollectionTNG,
+                "col-online" => HistoryView.CollectionOnline,
+                "col-qr" => HistoryView.CollectionQRPay,
+
                 // -------- Work --------
                 "work-order" => HistoryView.WorkOrder,
                 "work-item" => HistoryView.WorkItem,
@@ -97,7 +106,6 @@ namespace BeauposHistory.Shared.Pages
 
 
 
-        // 在 yourpage.razor.cs 中添加
         private bool isSidebarExpanded = true;
 
         private void ToggleSidebar()
@@ -132,8 +140,11 @@ namespace BeauposHistory.Shared.Pages
 
 
 
- 
 
+        bool ShowReceiptModal;
+
+        void OpenReceipt() => ShowReceiptModal = true;
+        void CloseReceipt() => ShowReceiptModal = false;
 
 
 

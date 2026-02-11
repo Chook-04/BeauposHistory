@@ -1,0 +1,38 @@
+﻿@using BeauposHistory.Shared.Components.Common
+
+<BaseModal Visible="Visible" OnClose="OnClose" Size="BaseModal.ModalSize.Medium">
+    <header class="details-header">
+        <button type="button" class="custom-close-btn" @onclick="OnClose">
+            <i class="oi oi-x"></i>
+        </button>
+        <h2 class="title">Details</h2>
+    </header>
+
+    <main class="details-content">
+        <div class="item-card">
+            <div class="item-icon">👤</div>
+            <div class="item-info">
+                <div class="item-name">WK</div>
+                <div class="order-tag">••••••••3528</div>
+            </div>
+        </div>
+
+        <div class="item-card vertical">
+            <div class="item-main">
+                <span class="order-id">#0000000015</span>
+                <span class="price-highlight">209.00</span>
+            </div>
+
+            <hr class="card-divider" />
+
+            <div class="item-sub">
+                <span class="payment-method">TNG</span>
+                <span class="payment-amount">209.00</span>
+            </div>
+        </div>
+    </main>
+</BaseModal>
+
+@code {
+
+}

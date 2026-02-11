@@ -1,0 +1,116 @@
+﻿.details-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--silver);
+    background-color: var(--paper);
+}
+
+.custom-close-btn {
+    width: 34px;
+    height: 34px;
+    background: white;
+    border: 1px solid #CEC6C3;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+    .custom-close-btn:hover {
+        background-color: #f5f5f5;
+        border-color: #000;
+    }
+
+    .custom-close-btn i {
+        font-size: 1.1rem;
+        color: #333333;
+        font-weight: bold;
+    }
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--brown);
+    margin-right: 24px; 
+}
+
+.details-content {
+    padding: 20px;
+    background-color: var(--paper);
+}
+
+.item-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+    .item-card.vertical {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+.item-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.item-name {
+    font-weight: 600;
+    color: var(--brown);
+    font-size: 16px;
+}
+
+.order-tag {
+    color: var(--silver);
+    font-size: 14px;
+}
+
+.item-main, .item-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id {
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.price-highlight {
+    color: var(--rose); 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-divider {
+    border: 0;
+    border-top: 1px solid var(--silver);
+    margin: 12px 0;
+}
+
+.payment-method {
+    color: var(--brown);
+    opacity: 0.8;
+}
+
+.payment-amount {
+    color: var(--rose);
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -1,0 +1,186 @@
+/* 容器基础 */
+.outstanding-container[b-w0urzy91hc] {
+    padding: 12px;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+.view-title[b-w0urzy91hc] {
+    text-align: center;
+    color: var(--brown);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* 核心卡片设计 */
+.outstanding-list[b-w0urzy91hc] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.outstanding-card[b-w0urzy91hc] {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px var(--shadow);
+    max-width: 800px;
+    border: 1px solid var(--silver);
+    cursor: pointer;
+}
+
+.card-main[b-w0urzy91hc] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--paper);
+}
+
+.left-section[b-w0urzy91hc] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*flex: 1.2;*/ /* 给单号和时间多一点空间 */
+}
+
+.middle-section[b-w0urzy91hc] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.right-section[b-w0urzy91hc] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.card-footer[b-w0urzy91hc] {
+    padding-top: 12px;
+}
+
+.badge-group[b-w0urzy91hc] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-badge[b-w0urzy91hc] {
+    background: var(--cream);
+    color: var(--brown);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.outstanding-badge[b-w0urzy91hc] {
+    background: #F8D7DA;
+    color: #DC3545;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #F5C6CB;
+}
+
+.is-collection .outstanding-badge[b-w0urzy91hc] {
+    background: #e1e7ff;
+    color: #4c51bf;
+    border: 1px solid #c3dafe;
+}
+
+
+@media (max-width: 900px) {
+    .card-main[b-w0urzy91hc] {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .outstanding-list[b-w0urzy91hc] {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    .card-main[b-w0urzy91hc] {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-section[b-w0urzy91hc], .middle-section[b-w0urzy91hc], .right-section[b-w0urzy91hc] {
+        flex: 1;
+        text-align: left;
+    }
+
+    .right-section[b-w0urzy91hc] {
+        text-align: right;
+    }
+}
+
+/* --- iPhone SE Portrait (竖屏 375px) 适配 --- */
+@media (max-width: 400px) {
+    .card-main[b-w0urzy91hc] {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .left-section[b-w0urzy91hc],
+    .middle-section[b-w0urzy91hc],
+    .right-section[b-w0urzy91hc] {
+        flex: 1 0 100%;
+        width: 100%;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-section[b-w0urzy91hc] {
+        text-align: left;
+    }
+
+    .right-section[b-w0urzy91hc] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .badge-group[b-w0urzy91hc] {
+        flex-direction: row;
+    }
+}
+
+/* --- iPhone SE Landscape (横屏 667px) 适配 --- */
+
+
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+    .outstanding-list[b-w0urzy91hc] {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+.text-bold[b-w0urzy91hc] {
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.text-muted[b-w0urzy91hc] {
+    color: var(--silver);
+    font-size: 0.8rem;
+}
+
+.text-right[b-w0urzy91hc] {
+    text-align: right;
+}

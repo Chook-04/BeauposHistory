@@ -1,23 +1,19 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Chook Jing Foong\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.modules.json",
+      "Id": "C:\\Users\\Eurosolve\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.modules.json",
       "PackagePath": "staticwebassets\\_framework\\blazor.modules.json"
     },
     {
-      "Id": "C:\\Users\\Chook Jing Foong\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.webview.js",
+      "Id": "C:\\Users\\Eurosolve\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.webview.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webview.js"
     },
     {
-      "Id": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\obj\\Debug\\net10.0-windows10.0.19041.0\\win-x64\\scopedcss\\bundle\\BeauposHistory.styles.css",
-      "PackagePath": "staticwebassets\\BeauposHistory.styles.css"
-    },
-    {
-      "Id": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\wwwroot\\app.css",
+      "Id": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Chook Jing Foong\\Documents\\GitHub\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Eurosolve\\Downloads\\BeauposHistory\\BeauposHistory\\BeauposHistory\\BeauposHistory\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

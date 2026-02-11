@@ -1,7 +1,145 @@
-﻿
-@using BeauposHistory.Shared.Enums
+﻿@using BeauposHistory.Shared.Enums
+@using BeauposHistory.Shared.Components.Common
+@using BeauposHistory.Shared.Components.Modals.Work
 
-<h3>WorkHistory: @View</h3>
+<div class="work-container">
+    <h3 class="view-title">Work: @GetViewTitle()</h3>
+
+    @if (View == HistoryView.WorkItem)
+    {
+        <div class="segmented-control">
+            @foreach (var tab in itemTabs)
+            {
+                <div class="segment @(activeTab == tab ? "active" : "")"
+                     @onclick="() => activeTab = tab">
+                    @tab
+                </div>
+            }
+        </div>
+
+        <div class="summary-section">
+            <div class="total-text">Total - @FilteredItems.Count()</div>
+            @if (activeTab != "All")
+            {
+                <div class="group-label">@activeTab.ToUpper()</div>
+            }
+        </div>
+
+        @foreach (var item in FilteredItems)
+        {
+            <div class="item-card" @onclick="OpenItemDetail">
+                <div class="item-icon-box"><i class="fas fa-image"></i></div>
+                <div class="item-info">
+                    <div class="primary-text">@item.Name</div>
+                    <div class="secondary-text">@item.Price.ToString("N2")</div>
+                </div>
+                <div class="item-meta">
+                    <div class="qty-text">@item.Qty</div>
+                    <div class="price-text">@item.Price.ToString("N2")</div>
+                </div>
+            </div>
+        }
+    }
+    else if (View == HistoryView.WorkCustomer)
+    {
+        <div class="summary-section">
+            <div class="total-text">Total - 1</div>
+        </div>
+
+        <div class="customer-card" @onclick="OpenCustomerModal">
+            <div class="card-top">
+                <div class="customer-avatar">
+                    <i class="fas fa-user-circle fa-2x" style="color: #ccc;"></i>
+                </div>
+                <div class="customer-info">
+                    <div class="primary-text">WK</div>
+                    <div class="secondary-text">•••••••3528</div>
+                </div>
+                <div class="customer-stats">
+                    <div class="price-text">209.00</div>
+                    <div class="secondary-text">1 Order</div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <span class="payment-badge">TNG : 209.00</span>
+            </div>
+        </div>
+    }
+    else if (View == HistoryView.WorkStaff)
+    {
+        <div class="summary-section">
+            <div class="total-text">Total - 1</div>
+        </div>
+
+        <div class="staff-card " @onclick='() => OpenStaffDetail("Effie")'>
+            <div class="staff-profile">
+                <div class="staff-avatar-box"><i class="fas fa-image"></i></div>
+                <div class="staff-info">
+                    <div class="primary-text">Effie</div>
+                    <div class="secondary-text">(6016) 629-9810</div>
+                </div>
+            </div>
+            <div class="staff-metrics">
+                <div class="metric-column">
+                    <div class="metric-label">Effort</div>
+                    <div class="metric-value price-text">209.00</div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric-label">Sale</div>
+                    <div class="metric-value text-bold">209.00</div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric-label">Credit</div>
+                    <div class="metric-value">0.00</div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric-label">Voucher</div>
+                    <div class="metric-value">0.00</div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric-label">Point</div>
+                    <div class="metric-value">0.00</div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric-label">H.O.F</div>
+                    <div class="metric-value">0.00</div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="summary-section">
+            <div class="total-text">Total - 1</div>
+        </div>
+        <div class="order-card" @onclick="OpenReceipt">
+            <div class="primary-text">Order #000000015</div>
+            <div class="secondary-text">05:41 PM, 06/02/2026</div>
+        </div>
+    }
+</div>
+
+
+<StaffDetailModal Visible="isStaffModalVisible"
+                  StaffName="@selectedStaffName"
+                  OnClose="CloseStaffDetail" />
+
+
+<ItemDetailsModal @key="isItemDetailModalVisible"
+                  Visible="isItemDetailModalVisible"
+                  OnClose="CloseItemDetail" />
+
+<CustomerDetailsModal Visible="isCustomerDetailModalVisible"
+                      OnClose="CloseCustomerModal" />
+
+<BaseModal Visible="@ShowReceiptModal"
+           OnClose="@CloseReceipt"
+           Size="BaseModal.ModalSize.Large">
+
+    <HistoryDetails />
+
+</BaseModal>
+
 @code {
 
 }

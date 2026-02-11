@@ -1,0 +1,53 @@
+﻿@using BeauposHistory.Shared.Components.Common
+
+<BaseModal Visible="Visible" OnClose="OnClose" Size="BaseModal.ModalSize.Medium">
+    <div class="details-modal">
+        <div class="details-header">
+            <button type="button" class="custom-close-btn" @onclick="OnClose">
+                <i class="oi oi-x"></i>
+            </button>
+            <h3 class="title">Details</h3>
+        </div>
+
+        <div class="details-content">
+            <div class="item-card">
+                <div class="item-icon">
+                    <img src="/images/icon.png" class="icon-img" />
+                </div>
+
+                <div class="item-info">
+                    <div class="item-main">
+                        <span class="item-name">Antiaging facial</span>
+                        <span class="item-count">1</span>
+                    </div>
+                    <div class="item-sub">
+                        <span class="item-price-unit">209.00</span>
+                        <span class="item-price-total">209.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-label">Orders</div>
+
+            <div class="item-card">
+                <div class="item-info no-icon">
+                    <div class="item-main">
+                        <span class="order-id">#0000000015</span>
+                        <span class="item-count">1</span>
+                    </div>
+                    <div class="item-sub">
+                        <span class="order-tag">WK</span>
+                        <span class="item-price-total">209.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseModal>
+
+
+
+
+@code {
+
+}

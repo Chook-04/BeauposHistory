@@ -1,15 +1,17 @@
 ﻿@page "/history"
 @using BeauposHistory.Shared.Enums
-
+@using BeauposHistory.Shared.Components.History
+@using BeauposHistory.Shared.Components.Common
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
 
 
 <div class="history-layout">
     <div class="sidebar-toggle-btn" @onclick="ToggleSidebar">
         <i class="fas @(isSidebarExpanded ? "fa-times" : "fa-bars")"></i>
     </div>
-    <aside class="history-sidebar @(isSidebarExpanded ? "expanded" : "collapsed")" @onclick="ToggleSidebar">
+    <aside class="history-sidebar @(isSidebarExpanded ? "expanded" : "collapsed")">
 
         <!-- Date Filter -->
         <div class="date-filter">
@@ -155,36 +157,23 @@
     </aside>
 
 
-    @* <main class="history-main">
-        <div class="list-header">
-            <h2>@Label_DetailHeader</h2>
-            <span>@Label_RecordFoundCount</span>
-        </div>
-
-        <div class="record-list">
-            @for (int i = 0; i < 3; i++)
-            {
-                <div class="record-card">
-                    <div>
-                        <span class="record-id">@Label_RecordID</span>
-                        <span class="record-amount">@Label_RecordAmount</span>
-                    </div>
-
-                    <div>
-                        <div>@Label_RecordTimestamp</div>
-                        <div>----------------------------------</div>
-                        <div>Method: <span></span></div>
-                        <div>Processed by: <strong>Staff_01</strong></div>
-                    </div>
-                </div>
-            }
-        </div>
-    </main> *@
-
 
 
 
     <main class="history-main">
+        @* <button class="btn btn-primary" @onclick="OpenReceipt">
+            View Receipt
+        </button>
+
+        <BaseModal Visible="@ShowReceiptModal"
+                   OnClose="@CloseReceipt"
+                   Size="BaseModal.ModalSize.Large">
+
+            <HistoryDetails />
+
+        </BaseModal> *@
+
+
         @switch (CurrentView)
         {
             // -------- Collection --------

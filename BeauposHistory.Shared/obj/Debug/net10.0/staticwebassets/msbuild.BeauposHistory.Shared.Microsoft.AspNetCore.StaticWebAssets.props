@@ -17,28 +17,28 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>3127</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 15:49:21 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 10 Feb 2026 11:15:04 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.Shared.3i65gsqlit.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.Shared.l0pnk71f9g.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>BeauposHistory.Shared</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BeauposHistory.Shared</BasePath>
-      <RelativePath>BeauposHistory.Shared.3i65gsqlit.bundle.scp.css</RelativePath>
+      <RelativePath>BeauposHistory.Shared.l0pnk71f9g.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>3i65gsqlit</Fingerprint>
-      <Integrity>1W+PI34mLO3UEgKRd3zOeZ7x9k7M99OAUfIvvPzD4rI=</Integrity>
+      <Fingerprint>l0pnk71f9g</Fingerprint>
+      <Integrity>m0GmOJm1arCJObXLY1POlGj51zyYKZddW1GVJPmhjYs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>14235</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 16:42:18 GMT</LastWriteTime>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.Shared.3i65gsqlit.bundle.scp.css'))</OriginalItemSpec>
+      <FileLength>62520</FileLength>
+      <LastWriteTime>Tue, 10 Feb 2026 13:05:30 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BeauposHistory.Shared.l0pnk71f9g.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))">
       <SourceType>Package</SourceType>
@@ -57,7 +57,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1148</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 15:09:49 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 10 Feb 2026 11:15:04 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css'))">
@@ -77,7 +77,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>232810</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 15:09:49 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 10 Feb 2026 11:15:04 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css.map'))">
@@ -97,7 +97,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>589893</FileLength>
-      <LastWriteTime>Mon, 09 Feb 2026 15:09:49 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 10 Feb 2026 11:15:04 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css.map'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>

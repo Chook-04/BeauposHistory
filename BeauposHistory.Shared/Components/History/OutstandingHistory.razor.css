@@ -1,1 +1,186 @@
-﻿
+﻿/* 容器基础 */
+.outstanding-container {
+    padding: 12px;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+.view-title {
+    text-align: center;
+    color: var(--brown);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* 核心卡片设计 */
+.outstanding-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.outstanding-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px var(--shadow);
+    max-width: 800px;
+    border: 1px solid var(--silver);
+    cursor: pointer;
+}
+
+.card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--paper);
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*flex: 1.2;*/ /* 给单号和时间多一点空间 */
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.card-footer {
+    padding-top: 12px;
+}
+
+.badge-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-badge {
+    background: var(--cream);
+    color: var(--brown);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.outstanding-badge {
+    background: #F8D7DA;
+    color: #DC3545;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #F5C6CB;
+}
+
+.is-collection .outstanding-badge {
+    background: #e1e7ff;
+    color: #4c51bf;
+    border: 1px solid #c3dafe;
+}
+
+
+@media (max-width: 900px) {
+    .card-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .outstanding-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    .card-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-section, .middle-section, .right-section {
+        flex: 1;
+        text-align: left;
+    }
+
+    .right-section {
+        text-align: right;
+    }
+}
+
+/* --- iPhone SE Portrait (竖屏 375px) 适配 --- */
+@media (max-width: 400px) {
+    .card-main {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .left-section,
+    .middle-section,
+    .right-section {
+        flex: 1 0 100%;
+        width: 100%;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-section {
+        text-align: left;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .badge-group {
+        flex-direction: row;
+    }
+}
+
+/* --- iPhone SE Landscape (横屏 667px) 适配 --- */
+
+
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+    .outstanding-list {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+.text-bold {
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.text-muted {
+    color: var(--silver);
+    font-size: 0.8rem;
+}
+
+.text-right {
+    text-align: right;
+}

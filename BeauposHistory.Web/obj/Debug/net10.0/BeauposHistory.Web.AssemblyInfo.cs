@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeauposHistory.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e91b6f90c2bf10d8f6d1c2e5371e473363a31639")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f260efcec7b9cae93cd035c74a178792710d4cdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeauposHistory.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeauposHistory.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

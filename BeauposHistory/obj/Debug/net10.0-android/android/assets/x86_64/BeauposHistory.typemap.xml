@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="BeauposHistory" mvid="112fc3a1aced40649bcc658d2ba82ac4">
+<api type="debug" assembly-name="BeauposHistory" mvid="81b7b42869914d969120eb3eb24a0e82">
   <java-to-managed>
     <entry java-name="crc64c625a0e13b123e8b/MainActivity" managed-name="BeauposHistory.MainActivity, BeauposHistory" managed-type-token-id="33554440" />
     <entry java-name="crc64c625a0e13b123e8b/MainApplication" managed-name="BeauposHistory.MainApplication, BeauposHistory" managed-type-token-id="33554441" />

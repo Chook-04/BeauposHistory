@@ -1,0 +1,116 @@
+﻿
+.details-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--silver);
+    background-color: var(--paper);
+    position: relative;
+}
+
+.custom-close-btn {
+    width: 34px;
+    height: 34px;
+    background: white;
+    border: 1px solid #CEC6C3;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+    .custom-close-btn:hover {
+        background-color: #f5f5f5;
+        border-color: #000;
+    }
+
+    .custom-close-btn i {
+        font-size: 1.1rem;
+        color: #333333;
+        font-weight: bold;
+    }
+
+.details-header .title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--brown);
+    padding-right: 20px;
+}
+
+.details-content {
+    padding: 16px;
+    background-color: var(--paper); 
+}
+
+.item-card {
+    display: flex;
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.item-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--silver);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.icon-placeholder {
+    color: var(--paper);
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+    .item-info.no-icon {
+        padding-left: 0;
+    }
+
+.item-main, .item-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.item-name, .order-id {
+    font-weight: 500;
+    color: var(--brown);
+    font-size: 15px;
+}
+
+.item-count {
+    font-weight: bold;
+    color: var(--brown);
+}
+
+.item-price-unit, .order-tag {
+    font-size: 14px;
+    color: var(--brown);
+    opacity: 0.7; 
+}
+
+.item-price-total {
+    font-weight: 600;
+    color: var(--rose);
+}
+
+.section-label {
+    font-size: 14px;
+    color: var(--brown);
+    opacity: 0.6;
+    margin: 20px 0 8px 4px;
+    letter-spacing: 0.5px;
+}

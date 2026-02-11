@@ -1,1 +1,106 @@
-﻿
+﻿.signup-redeem-container {
+    padding: 12px;
+    background-color: var(--white);
+    min-height: 100%;
+}
+
+.view-title {
+    text-align: center;
+    color: var(--brown);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* --- 卡片设计 --- */
+.history-card {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--shadow);
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.customer-ref {
+    font-size: 0.75rem;
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.card-footer-line {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--silver);
+}
+
+.status-badge {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--brown);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- iPhone SE Portrait (竖屏 375px) --- */
+@media (max-width: 400px) {
+    .history-card {
+        padding: 12px;
+    }
+
+    .title-row {
+        flex-direction: column; /* 竖屏下将姓名移到标题下方，避免标题过长重叠 */
+        gap: 2px;
+    }
+
+    .customer-ref {
+        align-self: flex-end; /* 将会员号靠右显示 */
+    }
+
+    .primary-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- iPhone SE Landscape (横屏 667px) --- */
+@media (min-width: 600px) {
+    .signup-redeem-container {
+        padding: 20px;
+    }
+
+    .history-card {
+        max-width: 100%;
+    }
+
+    /* 横屏时利用空间，让标题和会员号并排 */
+    .title-row {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* 引用你提供的通用样式 */
+.primary-text {
+    font-weight: 600;
+    color: var(--brown);
+}
+
+.secondary-text {
+    color: var(--rose);
+    font-size: 0.8rem;
+}
+
+.total-text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--brown);
+    border-left: 4px solid var(--rose);
+    padding-left: 8px;
+}
